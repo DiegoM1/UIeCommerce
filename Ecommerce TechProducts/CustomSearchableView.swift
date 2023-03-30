@@ -26,7 +26,7 @@ struct CustomSearchableView: View {
                         }
                     }
                 })
-                .frame(height: showCancelButton ? 40 : 30)
+                .frame(height: 30)
                 .padding()
                 .background(.gray.opacity(0.1))
                 .cornerRadius(12)
@@ -36,10 +36,11 @@ struct CustomSearchableView: View {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
                 } label: {
                     Text("Cancel")
-                        .foregroundColor(.red)
+                        .foregroundColor(.blue)
                 }
             }
         }
+        .navigationBarHidden(isFocused)
         .padding()
     }
 }
